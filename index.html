@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cow</title>
+    <link rel='stylesheet' href='dist/style.css'>
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="icon" href="./src/favicon/favicon.png">
+</head>
+<body>
+    <div class="main-background"></div>
+    <div class="blurred-container"></div>
+    <div class="logo-wrapper">
+        <div class="logo">
+            <div class="logo-image">
+                <img src="src/img/logo.png" alt="LOGO">
+            </div>
+            <div class="logo-text">
+                Система комплексного мониторинга состояния молочных коров
+            </div>
+        </div>
+    </div>
+    <div class="title-wrapper">
+        <div class="title-container">
+            Ответьте на 3 вопроса и узнайте
+        </div>
+    </div>
+
+    <div class="tagline-wrapper">
+        <div class="tagline-container">
+            Как <span>увеличить удой каждой коровы до 15%</span> путем
+        </div>
+    </div>
+
+    <div class="smart-items-wrapper">
+        <div class="smart-items-container">
+            <div class="smart-item item-1">
+                <div class="item-icon"></div>
+                <div class="item-1-text"><span>Своевременного определения половой охоты</span> <br> особенно если она не заметна по внешним признакам</div>
+            </div>
+            <div class="smart-item item-2">
+                <div class="item-icon"></div>
+                <div class="item-2-text"><span>Анализом состояния здоровья коровы</span> <br> при наблюдении за жвачкой, активностью и температурой тела</div>
+            </div>
+            <div class="smart-item item-3">
+                <div class="item-icon"></div>
+                <div class="item-3-text"><span>Выявление хромоты</span> <br> предупреждением и выявлением развития хромоты</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <div class="quiz-main-wrapper">
+                <div class="quiz-progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress">
+                            <div class="bar" id="bar"></div>
+                            <div class="progress-point point-1 active"></div>
+                            <div class="progress-point point-2"></div>
+                            <div class="progress-point point-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <form action="mail.php" method="POST">
+                <div class="owl-carousel">
+                        <div> 
+                            <div class="quiz-main-content first-card">
+                                <div class="quiz-question-title">Вопрос 1</div>
+                                <div class="quiz-question-wrapper">
+                                    <div class="quiz-question">Сколько у вас <span>дойных коров?</span></div>
+                                </div>
+                                <input class="quiz-input" type="text" name="number-of-cows" id="cows-number" placeholder="Например: 45">
+                            </div> 
+                        </div>
+                        <div>
+                            <div class="quiz-main-content second-card">
+                                <div class="quiz-question-title">Вопрос 2</div>
+                                <div class="quiz-question-wrapper">
+                                    <div class="quiz-question">Сколько <span>молока в сутки вы доите?</span></div>
+                                </div>
+                                <input class="quiz-input" type="text" name="amount-of-milk" id="milk-amount" placeholder="Например: 12">
+                            </div>  
+                        </div>
+                        <div>
+                            <div class="quiz-main-content third-card">
+                                <div class="quiz-question-title">Вопрос 3</div>
+                                <div class="quiz-question-wrapper">
+                                    <div class="quiz-question"><span>Вы являетесь?</span></div>
+                                </div>
+                                <div class="quiz-choise-wrapper">
+                                    <div class="quiz-choise-card">
+                                        <div class="quiz-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="question-3-choise" id="choise-1" value="Руководитель фермы" checked>
+                                            <label for="choise-1">Руководителем фермы</label>
+                                        </div>
+                                    </div>
+                                    <div class="quiz-choise-card">
+                                        <div class="quiz-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="question-3-choise" value="Зоотехник" id="choise-2">
+                                            <label for="choise-2">Зоотехником</label>
+                                        </div>
+                                    </div>
+                                    <div class="quiz-choise-card">
+                                        <div class="quiz-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="question-3-choise" value="Ветеренар" id="choise-3">
+                                            <label for="choise-3">Ветеренаром</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div>
+                            <div class="quiz-main-content final-card">
+                                <div class="quiz-question-wrapper">
+                                    <div class="quiz-question"><span>Куда прислать вам ответ?</span></div>
+                                </div>
+                                <div class="final-choise-wrapper">
+                                    <div class="final-choise-card card-1">
+                                        <div class="final-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="contact-choise" value="По телефону" id="final-1" checked>
+                                            <label for="final-1">По телефону</label>
+                                        </div>
+                                    </div>
+                                    <div class="final-choise-card card-2">
+                                        <div class="final-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="contact-choise" value="E-mail" id="final-2">
+                                            <label for="final-2">E-mail</label>
+                                        </div>
+                                    </div>
+                                    <div class="final-choise-card card-3">
+                                        <div class="final-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="contact-choise" value="Viber" id="final-3">
+                                            <label for="final-3">Viber</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="final-choise-wrapper-2">
+                                    <div class="final-choise-card card-4">
+                                        <div class="final-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="contact-choise" value="Telegram" id="final-4">
+                                            <label for="final-4">Telegram</label>
+                                        </div>
+                                    </div>
+                                    <div class="final-choise-card card-5">
+                                        <div class="final-choise-card-content">
+                                            <input class="quiz-chiose" type="radio" name="contact-choise" value="Whatsapp" id="final-5">
+                                            <label for="final-5">Whatsapp</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-info-wrapper">
+                                    <div class="contact-info" id="hide">
+                                        <label for="email">Введите ваш e-mail</label>
+                                        <input class="contact-info-input" type="email" name="user_mail" id="email" autocomplete="none" placeholder="simple@example.com">
+                                    </div>
+                                    <div class="contact-info-tel">
+                                        <label for="tel">Введите ваш телефон</label>
+                                        <input class="contact-info-input" type="tel" name="user_phone" id="tel" autocomplete="none" placeholder="+375(__)___-__-__">
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                </div>   
+                <button class="final-button" id="hide">Отправить и получить ответ</button>
+                </form> 
+                <button class="quiz-button" disabled>Далее <span class="button-arrow">></span></button> 
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+</html>
