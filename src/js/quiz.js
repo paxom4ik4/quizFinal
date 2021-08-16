@@ -79,51 +79,43 @@ $(document).ready(()=>{
       }
     });
 
-    function checkFirstInput() {
-      let cowsAmount = $('#cows-number').val();
-      if(cowsAmount.length != 0) {
+    const checkFirstInput = () => {
+      const cowsAmount = $('#cows-number').val();
+      if(cowsAmount.length) {
         $('.quiz-button').removeAttr('disabled');
-      }
-      else {
+      } else {
         $('.quiz-button').attr('disabled', 'disabled');
       }
     };
 
-    function checkSecondInput() {
-      let milkAmount = $('#milk-amount').val();
-      if(milkAmount.length != 0) {
+    const checkSecondInput = () => {
+      const milkAmount = $('#milk-amount').val();
+      if(milkAmount.length) {
         $('.quiz-button').removeAttr('disabled');
-      }
-      else {
+      } else {
         $('.quiz-button').attr('disabled', 'disabled');
       }
     };
     
-    $('#cows-number').keyup(()=>{
-      checkFirstInput()
-    });
+    $('#cows-number').keyup(checkFirstInput);
 
-    $('#milk-amount').keyup(()=>{
-      checkSecondInput()
-    })
+    $('#milk-amount').keyup(checkSecondInput)
 
-    let cards = document.querySelectorAll('.final-choise-card');
+    const cards = document.querySelectorAll('.final-choise-card');
     const finalChoiseWrapper = document.querySelector('.final-choise-wrapper');
     const finalChoiseWrapper2 = document.querySelector('.final-choise-wrapper-2');
 
-    finalChoiseWrapper.addEventListener('click', (e)=>{
-      let target = e.target;
-      let targetAttr = target.getAttribute('id');
-      if(targetAttr == 'final-2'){
+    finalChoiseWrapper.addEventListener('click', (event)=>{
+      let targetAttr = event.target.getAttribute('id');
+      if(targetAttr === 'final-2'){
         $('.contact-info').removeAttr('id','hide');
         $('.contact-info-tel').attr('id','hide');
-      }
-      else{
+      } else{
         $('.contact-info').attr('id','hide');
         $('.contact-info-tel').removeAttr('id','hide');
       }
     })
-    finalChoiseWrapper2.addEventListener('click', (e)=>{
+    finalChoiseWrapper2.addEventListener('click', ()=>{
       $('.contact-info').attr('id','hide');
       $('.contact-info-tel').removeAttr('id','hide');
     })
